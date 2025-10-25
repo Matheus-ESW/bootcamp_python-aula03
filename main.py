@@ -7,7 +7,7 @@
 # quantidade = int(input("Digite a quantidade vendida: "))
 # preco = float(input("Digite o preço do produto: "))
 
-# if(quantidade > 0 and preco > 0):
+# if quantidade > 0 and preco > 0:
 #     print("Dados válidos!")
 # else:
 #     print("Dados inválidos")
@@ -24,9 +24,9 @@
 
 temperatura = float(input("Informe a temperatura: "))
 
-if(temperatura < 18):
+if temperatura < 18:
     print("Temperatura Baixa!")
-elif(temperatura >= 18 and temperatura <= 26):
+elif 18 <= temperatura <= 26:
     print("Temperatura Normal!")
 else:
     print("Temperatura Alta!")
