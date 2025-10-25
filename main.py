@@ -37,7 +37,30 @@
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
 
 # ex3
-log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
+# log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
 
-if log['level'] == 'ERROR':
-    print(log['message'])
+# if log['level'] == 'ERROR':
+#     print(log['message'])
+
+# Exercício 4: Validação de Dados de Entrada
+# Antes de processar os dados de usuários em um sistema de recomendação, você precisa garantir
+# que cada usuário tenha idade entre 18 e 65 anos e tenha fornecido um email válido. Escreva um
+# programa que valide essas condições e imprima "Dados de usuário válidos" ou o erro específico encontrado.
+
+#ex4
+# email = int(input("Informe o email: "))
+
+try:
+    idade = int(input("Informe a idade: "))
+
+    if idade >= 18 and idade <= 65:
+        print("Dados válidos")
+    else:
+        raise ValueError("A idade deve estar entre 18 e 65 anos")
+    
+    # elif any(char.isdigit() for char in nome):
+    #     raise ValueError("O nome não deve conter números.")
+    # else:
+    #     print("Nome válido:", nome)
+except ValueError as e:
+    print(e)
