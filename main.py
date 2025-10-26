@@ -71,17 +71,32 @@
 
 #ex5
 
-try:
-    transacao = {'valor': 15000, 'hora': 22}
+# try:
+#     transacao = {'valor': 15000, 'hora': 22}
 
-    if transacao["valor"] > 10000 and not 9 <= transacao["hora"] <= 20:
-        print("Transação considerada suspeita!")
+#     if transacao["valor"] > 10000 and not 9 <= transacao["hora"] <= 20:
+#         print("Transação considerada suspeita!")
 
-        if transacao["valor"] > 10000:
-            raise ValueError(f"Transação suspeita, valor superior a R$ 10.000,00, valor da transf.: {transacao["valor"]}!")
-        elif not 9 <= transacao["hora"] <= 20:
-            raise ValueError(f"Transação suspeita, fora do horario comercial, hora da transac.: {transacao["hora"]}!")   
+#         if transacao["valor"] > 10000:
+#             raise ValueError(f"Transação suspeita, valor superior a R$ 10.000,00, valor da transf.: {transacao["valor"]}!")
+#         elif not 9 <= transacao["hora"] <= 20:
+#             raise ValueError(f"Transação suspeita, fora do horario comercial, hora da transac.: {transacao["hora"]}!")   
+#     else:
+#         print("Transação considerada normal!")
+# except ValueError as e:
+#     print(e)
+
+# Exercício 6. Contagem de Palavras em Textos
+# Objetivo: Dado um texto, contar quantas vezes cada palavra única aparece nele.
+
+frase = "a raposa marrom salta sobre o cachorro preguiçoso"
+palavras = frase.split()
+contagem_palavras = {}
+
+for palavra in palavras:
+    if palavra in contagem_palavras:
+        contagem_palavras[palavra] += 1
     else:
-        print("Transação considerada normal!")
-except ValueError as e:
-    print(e)
+        contagem_palavras[palavra] = 1
+
+print(contagem_palavras)
