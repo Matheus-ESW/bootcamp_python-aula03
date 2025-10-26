@@ -136,19 +136,83 @@
 # Exercício 10. Agregação de Dados por Categoria
 # Objetivo: Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
 
-vendas = [
-    {"categoria": "eletrônicos", "valor": 1200},
-    {"categoria": "livros", "valor": 200},
-    {"categoria": "eletrônicos", "valor": 800}
-]
+# vendas = [
+#     {"categoria": "eletrônicos", "valor": 1200},
+#     {"categoria": "livros", "valor": 200},
+#     {"categoria": "eletrônicos", "valor": 800}
+# ]
 
-total_por_categoria = {}
-for venda in vendas:
-    categoria = venda["categoria"]
-    valor = venda["valor"]
-    if categoria in total_por_categoria:
-        total_por_categoria[categoria] += valor
-    else:
-        total_por_categoria[categoria] = valor
+# total_por_categoria = {}
+# for venda in vendas:
+#     categoria = venda["categoria"]
+#     valor = venda["valor"]
+#     if categoria in total_por_categoria:
+#         total_por_categoria[categoria] += valor
+#     else:
+#         total_por_categoria[categoria] = valor
 
-print(total_por_categoria)
+# print(total_por_categoria)
+
+# Exercício 11. Leitura de Dados até Flag
+# Objetivo: Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
+
+# dados = []
+# entrada = ""
+# while entrada.lower() != "sair":
+#     entrada = input("Digite um valor (ou 'sair' para terminar): ")
+#     if entrada.lower() != "sair":
+
+# Exercício 12. Validação de Entrada
+# Objetivo: Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+
+# numero = int(input("Digite um número entre 1 e 10: "))
+# while numero < 1 or numero > 10:
+#     print("Número fora do intervalo!")
+#     numero = int(input("Por favor, digite um número entre 1 e 10: "))
+
+# print("Número válido!")
+
+# Exercício 13. Consumo de API Simulado
+# Objetivo: Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que
+# não haja mais páginas.
+
+# pagina_atual = 1
+# paginas_totais = 5  # Simulação, na prática, isso viria da API
+
+# while pagina_atual <= paginas_totais:
+#     print(f"Processando página {pagina_atual} de {paginas_totais}")
+#     # Aqui iria o código para processar os dados da página
+#     pagina_atual += 1
+
+# print("Todas as páginas foram processadas.")
+
+# Exercício 14. Tentativas de Conexão
+# Objetivo: Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
+
+# tentativas_maximas = 5
+# tentativa = 1
+
+# while tentativa <= tentativas_maximas:
+#     print(f"Tentativa {tentativa} de {tentativas_maximas}")
+#     # Simulação de uma tentativa de conexão
+#     # Aqui iria o código para tentar conectar
+#     if True:  # Suponha que a conexão foi bem-sucedida
+#         print("Conexão bem-sucedida!")
+#         break
+#     tentativa += 1
+# else:
+#     print("Falha ao conectar após várias tentativas.")
+
+# Exercício 15. Processamento de Dados com Condição de Parada
+# Objetivo: Processar itens de uma lista até encontrar um valor específico que indica a parada.
+
+itens = [1, 2, 3, "parar", 4, 5]
+
+i = 0
+while i < len(itens):
+    if itens[i] == "parar":
+        print("Parada encontrada, encerrando o processamento.")
+        break
+    # Processa o item
+    print(f"Processando item: {itens[i]}")
+    i += 1
