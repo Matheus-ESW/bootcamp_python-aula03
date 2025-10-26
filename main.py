@@ -52,15 +52,13 @@
 
 try:
     idade = int(input("Informe a idade: "))
+    email = str(input("Informe o e-mail: "))
 
-    if idade >= 18 and idade <= 65:
-        print("Dados válidos")
+    if not 18 <= idade <= 65:
+        raise ValueError("A idade deve estar entre 18 e 65 anos!")
+    elif "@" not in email or "." not in email:
+        raise ValueError("E-mail inválido!")
     else:
-        raise ValueError("A idade deve estar entre 18 e 65 anos")
-    
-    # elif any(char.isdigit() for char in nome):
-    #     raise ValueError("O nome não deve conter números.")
-    # else:
-    #     print("Nome válido:", nome)
+        print("Dados de usuário válidos")
 except ValueError as e:
     print(e)
