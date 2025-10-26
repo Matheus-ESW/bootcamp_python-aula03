@@ -50,15 +50,38 @@
 #ex4
 # email = int(input("Informe o email: "))
 
-try:
-    idade = int(input("Informe a idade: "))
-    email = str(input("Informe o e-mail: "))
+# try:
+#     idade = int(input("Informe a idade: "))
+#     email = str(input("Informe o e-mail: "))
 
-    if not 18 <= idade <= 65:
-        raise ValueError("A idade deve estar entre 18 e 65 anos!")
-    elif "@" not in email or "." not in email:
-        raise ValueError("E-mail inválido!")
+#     if not 18 <= idade <= 65:
+#         raise ValueError("A idade deve estar entre 18 e 65 anos!")
+#     elif "@" not in email or "." not in email:
+#         raise ValueError("E-mail inválido!")
+#     else:
+#         print("Dados de usuário válidos")
+# except ValueError as e:
+#     print(e)
+
+# Exercício 5: Detecção de Anomalias em Dados de Transações
+# Você está trabalhando em um sistema de detecção de fraude e precisa identificar transações suspeitas.
+# Uma transação é considerada suspeita se o valor for superior a R$ 10.000 ou se ocorrer fora do horário
+#  comercial (antes das 9h ou depois das 18h). Dada uma transação como transacao = {'valor': 12000, 'hora': 20},
+# verifique se ela é suspeita.
+
+#ex5
+
+try:
+    transacao = {'valor': 15000, 'hora': 22}
+
+    if transacao["valor"] > 10000 and not 9 <= transacao["hora"] <= 20:
+        print("Transação considerada suspeita!")
+
+        if transacao["valor"] > 10000:
+            raise ValueError(f"Transação suspeita, valor superior a R$ 10.000,00, valor da transf.: {transacao["valor"]}!")
+        elif not 9 <= transacao["hora"] <= 20:
+            raise ValueError(f"Transação suspeita, fora do horario comercial, hora da transac.: {transacao["hora"]}!")   
     else:
-        print("Dados de usuário válidos")
+        print("Transação considerada normal!")
 except ValueError as e:
     print(e)
